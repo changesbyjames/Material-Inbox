@@ -1,0 +1,117 @@
+<link rel="import" href="/bower_components/polymer/polymer.html">
+  <style>
+    .message{
+      width: 280px;
+      height: 120px;
+      background: rgba(255,255,255,0.9);
+      overflow: hidden;
+      border-radius: 3px;
+      margin: auto;
+      margin-top: 10px;
+    }
+    .messageaccent{
+      height: 100%;
+      width: 40px;
+      background-color: #7CBBC1;
+      display: inline-block;
+      float: left;
+      overflow: hidden;
+      display: -webkit-flex;
+      -webkit-flex-flow: column nowrap;
+      -webkit-justify-content: center;
+      -webkit-align-content: center;
+      -webkit-align-items: center;
+    }
+    .messagename,.messagedate{
+      color: rgba(0,0,0,0.6);
+      padding: 0;
+      margin: 8px;
+    }
+    .messagedate{
+      float: right;
+      margin: 10px;
+    }
+    .messagecontent{
+      width:240px;
+      height: 100px;
+      float: right;
+      padding: 0;
+      margin: 0;
+    }
+    .messagetext,.messagesender{
+      padding: 0;
+      margin: 2px;
+      margin-left: 8px;
+      margin-right: 8px;
+      display: block;
+    }
+    .messagesender{
+      font-size: 13px;
+    }
+    .messageimage{
+      -webkit-order:1;
+      -webkit-flex:1 1 auto;
+      -webkit-align-self:stretch;
+      min-width:24px;
+      min-height:24px;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      display: none;
+    }
+    .messagemainicon{
+      -webkit-order:0;
+      -webkit-flex: 1 1 auto;
+      display: -webkit-flex;
+    }
+    .messageshow{
+      display: -webkit-flex;
+    }
+  </style>
+
+  <dom-module id="message-element">
+    <template>
+      <paper-material elevation=1 class="message">
+        <paper-material elevation=1 class="messageaccent">
+          <a class="messageimage canAnimate messageicon messagemainicon">
+            <iron-icon icon="communication:email"></iron-icon>
+          </a>
+          <a href=# class="messageimage canAnimate messageicon">
+            <iron-icon class="button"icon="cancel"></iron-icon>
+          </a>
+          <a href=# class="messageimage canAnimate messageicon ">
+            <iron-icon class="button" icon="expand-more"></iron-icon>
+          </a>
+        </paper-material>
+        <div class="messagecontent">
+          <h2 class="messagename">{{messagename}}</h2>
+          <h1 class="messagedate">{{messagedate}}</h1>
+          <p class="messagesender">Staff Member: <strong>{{messagesender}}</strong></p>
+          <p class="messagetext">{{messagecomment}}</p>
+        </div>
+      </paper-material>
+    </template>
+  </dom-module>
+
+  <script type="text/javascript">
+    Polymer({
+      is: "message-element",
+      properties: {
+        messagename: String,
+        messagedate: String,
+        messagesender: String,
+        messagecomment: String,
+        messagetype: {
+          type: String,
+          value: "referral"
+        },
+        messagecolor: {
+          type: String,
+          value: ""
+        }
+      }
+    });
+  </script>
