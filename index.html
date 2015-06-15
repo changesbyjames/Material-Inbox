@@ -54,6 +54,7 @@
   <!--Declaration of Polymer Elements-->
   <link rel="import" href="elements/message.html">
   <link rel="import" href="bower_components/paper-material/paper-material.html">
+  <link rel="import" href="bower_components/paper-ripple/paper-ripple.html">
   <link rel="import" href="bower_components/iron-icons/communication-icons.html">
   <link rel="import" href="bower_components/iron-icons/iron-icons.html">
   <link rel="import" href="bower_components/iron-icons/device-icons.html">
@@ -89,23 +90,26 @@
     <paper-material class="springboarduserinformation">
     </paper-material>
     <paper-material class="springboardbuttons">
-      <div class="springboardaddreferral canspring canAnimate">
+      <div class="springboardaddreferral canspring canAnimate" style="position:relative">
         <a href=#>
           <iron-icon icon="add"></iron-icon>
           <h2 class="springboardlabel"> New Referral</h2>
         </a>
+        <paper-ripple></paper-ripple>
       </div>
-      <div class="springboardmessages canspring canAnimate">
+      <div class="springboardmessages canspring canAnimate" style="position:relative">
         <a href=#>
           <iron-icon icon="communication:email"></iron-icon>
           <h2 class="springboardlabel"> Messages</h2>
         </a>
+        <paper-ripple></paper-ripple>
       </div>
-      <div class="springboardsettings canspring canAnimate">
+      <div class="springboardsettings canspring canAnimate" style="position:relative">
         <a href=#>
           <iron-icon icon="settings"></iron-icon>
           <h2 class="springboardlabel"> Settings</h2>
         </a>
+        <paper-ripple></paper-ripple>
       </div>
     </paper-material>
   </div>
