@@ -18,7 +18,7 @@
 	-webkit-justify-content: center;
 	-webkit-align-content: center;
 	-webkit-align-items: center;
-	display:-ms-flex;
+	display:-ms-flexbox;
  	-ms-flex-flow: column nowrap;
 	-ms-justify-content: center;
 	-ms-align-content: center;
@@ -45,7 +45,7 @@
 	-webkit-justify-content: center;
 	-webkit-align-content: center;
 	-webkit-align-items: center;
-	display:-ms-flex;
+	display:-ms-flexbox;
  	-ms-flex-flow: row nowrap;
 	-ms-justify-content: center;
 	-ms-align-content: center;
@@ -67,7 +67,7 @@
   	align-items: center;
 	 -webkit-justify-content: center;
 	 justify-content: center;
-	 display:-ms-flex;
+	 display:-ms-flexbox;
 	 -ms-align-items: center;
 	 --ms--justify-content: center;
 }
